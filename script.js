@@ -1,119 +1,166 @@
 //Declarations
-var count = 0;
-var screencount = '' + count;
+var current = "";
+var arith = "";
+var equals = 0;
+var equalCount = 0;
 
 function screenify() {
-    document.getElementById("count").innerHTML = screencount;
+    document.getElementById("count").innerHTML = current;
+    equalCount = 0;
 }
 
+function equalify() {
+    document.getElementById("count").innerHTML = equals;
+    arith = '' + equals;
+    current = "";
+}
 //Start of program proper
 window.addEventListener("DOMContentLoaded", function() {
     screenify();
 
     document.getElementById("ac").addEventListener("click", function() {
-        screencount = 0;
+        current = "0";
+        arith = current;
+        screenify();
+    });
+
+    document.getElementById("ce").addEventListener("click", function() {
+        current = "0";
         screenify();
     });
 
     document.getElementById("0").addEventListener("click", function() {
-        if (screencount === "0") {
-            screencount = "0";
+        if (current === "0") {
+            current = "0";
         } else {
-            screencount += "0";
+            current += "0";
         }
         screenify();
     });
 
     document.getElementById("1").addEventListener("click", function() {
-        if (screencount === "0") {
-            screencount = "1";
+        if (current === "0") {
+            current = "1";
         } else {
-            screencount += "1";
+            current += "1";
         }
         screenify();
     });
 
     document.getElementById("2").addEventListener("click", function() {
-        if (screencount === "0") {
-            screencount = "2";
+        if (current === "0") {
+            current = "2";
         } else {
-            screencount += "2";
+            current += "2";
         }
         screenify();
     });
 
     document.getElementById("3").addEventListener("click", function() {
-        if (screencount === "0") {
-            screencount = "3";
+        if (current === "0") {
+            current = "3";
         } else {
-            screencount += "3";
+            current += "3";
         }
         screenify();
     });
 
     document.getElementById("4").addEventListener("click", function() {
-        if (screencount === "0") {
-            screencount = "4";
+        if (current === "0") {
+            current = "4";
         } else {
-            screencount += "4";
+            current += "4";
         }
         screenify();
     });
 
     document.getElementById("5").addEventListener("click", function() {
-        if (screencount === "0") {
-            screencount = "5";
+        if (current === "0") {
+            current = "5";
         } else {
-            screencount += "5";
+            current += "5";
         }
         screenify();
     });
 
     document.getElementById("6").addEventListener("click", function() {
-        if (screencount === "0") {
-            screencount = "6";
+        if (current === "0") {
+            current = "6";
         } else {
-            screencount += "6";
+            current += "6";
         }
         screenify();
     });
 
     document.getElementById("7").addEventListener("click", function() {
-        if (screencount === "0") {
-            screencount = "7";
+        if (current === "0") {
+            current = "7";
         } else {
-            screencount += "7";
+            current += "7";
         }
         screenify();
     });
 
     document.getElementById("8").addEventListener("click", function() {
-        if (screencount === "0") {
-            screencount = "8";
+        if (current === "0") {
+            current = "8";
         } else {
-            screencount += "8";
+            current += "8";
         }
         screenify();
     });
 
     document.getElementById("9").addEventListener("click", function() {
-        if (screencount === "0") {
-            screencount = "9";
+        if (current === "0") {
+            current = "9";
         } else {
-            screencount += "9";
+            current += "9";
+        }
+        screenify();
+    });
+
+    document.getElementById("bb").addEventListener("click", function() {
+        current = "55378008";
+        screenify();
+    });
+
+    document.getElementById("decimal").addEventListener("click", function() {
+        if (current === "0") {
+            current = "0.";
+        } else {
+            current += ".";
         }
         screenify();
     });
 
     document.getElementById("add").addEventListener("click", function() {
-          count += Number(screencount);
-          screencount = "0";
+          arith += current + "+";
+          current = "0";
+        screenify();
+    });
+
+    document.getElementById("divide").addEventListener("click", function() {
+          arith += current + "/";
+          current = "0";
+        screenify();
+    });
+    document.getElementById("multiply").addEventListener("click", function() {
+          arith += current + "*";
+          current = "0";
+        screenify();
+    });
+    document.getElementById("subtract").addEventListener("click", function() {
+          arith += current + "-";
+          current = "0";
         screenify();
     });
 
     document.getElementById("equals").addEventListener("click", function() {
-          count += Number(screencount);
-          screencount = '' + count;
-        screenify();
+          equalCount++;
+          if (equalCount < 2) {
+          arith += current;
+          equals = eval(arith);
+        equalify();
+    }
     });
 });
