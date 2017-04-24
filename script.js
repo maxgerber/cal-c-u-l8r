@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", function() {
         screenify();
     });
 
-    document.getElementById("0").addEventListener("click", function() {
+    document.getElementById("zero").addEventListener("click", function() {
         if (current === "0") {
             current = "0";
         } else {

@@ -89,6 +89,10 @@ button {
   border: 1px;
 }
 
+#zero {
+    width: 40%;
+}
+
 #ac, #ce {
   background: #EF8D4C;
   color: black;
@@ -98,4 +102,10 @@ button {
     background: pink;
     background: linear-gradient(to right, pink , yellow);
     color: black;
+}
+
+@media screen and (max-width: 254px;) {
+    main {
+        width: 90%;
+    }
 }
