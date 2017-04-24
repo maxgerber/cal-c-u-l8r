@@ -9,10 +9,12 @@ h1 {
     font-family: "Digital-7", monospace;
     font-size: 5em;
     text-decoration: underline;
+    color: black;
 }
 
 h2 {
     font-family: "Digital-7", monospace;
+    color: black;
 }
 
 main {
@@ -27,6 +29,24 @@ main {
     border: 3px orange;
     border-radius: 1em;
     padding: 0.5em;
+}
+
+.animate {
+    animation: spin 4s linear;
+}
+
+@keyframes spin {
+    40% {
+        transform: rotate(180deg);
+    }
+
+    60% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @font-face {
@@ -74,7 +94,8 @@ button {
   color: black;
 }
 
-#bb {
-    background: black;
+#lol {
+    background: pink;
     background: linear-gradient(to right, pink , yellow);
+    color: black;
 }

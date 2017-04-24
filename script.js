@@ -3,14 +3,14 @@ var current = "0";
 var arith = "";
 var equals = 0;
 var equalCount = 0;
-var lulz = [ "55378008", "55318008", "101", "1015",
-// "37047734", "7734206", "1134206", "707", "5707", "070616"
+var lolCount = 0;
+var lulz = [ "55378008", "5318008", "37047734", "7734206", "1134206", "707", "5707", "070616"
 ];
 
 function screenify() {
     document.getElementById("count").innerHTML = current;
     equalCount = 0;
-}
+    };
 
 function equalify() {
     document.getElementById("count").innerHTML = equals;
@@ -122,8 +122,14 @@ window.addEventListener("DOMContentLoaded", function() {
         screenify();
     });
 
-    document.getElementById("bb").addEventListener("click", function() {
-            current = lulz[ Math.floor( Math.random() * 4 ) ];
+    document.getElementById("lol").addEventListener("click", function() {
+        current = lulz[ Math.floor( Math.random() * 8 ) ];
+
+        var element = document.getElementById("calculator");
+          element.classList.remove("animate");
+          void element.offsetWidth;
+          element.classList.add("animate");
+
         screenify();
     });
 
