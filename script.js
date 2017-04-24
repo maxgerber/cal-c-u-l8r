@@ -1,8 +1,11 @@
 //Declarations
-var current = "";
+var current = "0";
 var arith = "";
 var equals = 0;
 var equalCount = 0;
+var lulz = [ "55378008", "55318008", "101", "1015",
+// "37047734", "7734206", "1134206", "707", "5707", "070616"
+];
 
 function screenify() {
     document.getElementById("count").innerHTML = current;
@@ -120,7 +123,7 @@ window.addEventListener("DOMContentLoaded", function() {
     });
 
     document.getElementById("bb").addEventListener("click", function() {
-        current = "55378008";
+            current = lulz[ Math.floor( Math.random() * 4 ) ];
         screenify();
     });
 

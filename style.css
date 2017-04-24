@@ -29,10 +29,11 @@ main {
     padding: 0.5em;
 }
 
-@@font-face {
+@font-face {
     font-family: "Digital-7";
     src: url("digital-7.ttf");
 }
+
 #screen {
     width: 88%;
     height: 20%;
@@ -60,7 +61,20 @@ button {
   width:20%;
   height:16%;
   margin: 2.5% 1%;
-  background: #ccccff;
-  font-family: "Helvetica", sans-serif;
-  font-size: 1.75em;
+  background: black;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.8em;
+  border-radius: 10px;
+  border: 1px;
+}
+
+#ac, #ce {
+  background: #EF8D4C;
+  color: black;
+}
+
+#bb {
+    background: black;
+    background: linear-gradient(to right, pink , yellow);
 }
